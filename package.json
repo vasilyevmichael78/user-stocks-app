@@ -49,6 +49,7 @@
     "zustand": "^5.0.7"
   },
   "devDependencies": {
+    "@nestjs/cli": "^11.0.10",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.0",
     "@nx/jest": "21.3.11",
