@@ -1,0 +1,41 @@
+{
+  "name": "@user-stocks-app/backend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.app.json",
+    "start": "node dist/main.js",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "options": {
+          "tsConfig": "backend/tsconfig.app.json",
+          "outputPath": "backend/dist",
+          "main": "backend/src/main.ts"
+        },
+        "configurations": {
+          "production": {
+            "outputPath": "backend/dist",
+            "tsConfig": "backend/tsconfig.app.json"
+          }
+        }
+      },
+      "serve": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npm run start:dev",
+          "cwd": "backend"
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
+}
