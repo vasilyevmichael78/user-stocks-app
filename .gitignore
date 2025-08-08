@@ -20,6 +20,10 @@ node_modules
 .vscode/
 !.vscode/extensions.json
 !.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/*.code-snippets
 .project
 .classpath
 .c9/
